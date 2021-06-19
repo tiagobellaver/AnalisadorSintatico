@@ -1,0 +1,28 @@
+.cabecalho {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 25px 0;
+}
+
+.cabecalho-tabela {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.linha-tabela {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.linha-tabela td {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    width: 80px;
+    
+}
+
+.linha-tabela th {
+    width: 80px;
+    text-align: center;
+}

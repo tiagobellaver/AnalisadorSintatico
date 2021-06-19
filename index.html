@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="css/bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+    <title>Analisador Sintático</title>
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col cabecalho">
+                    <h1>Analisador Sintático</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="gramatica">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <table class="gram-table">
+                            <thead>
+                                <tr class="cabecalho-tabela">
+                                    <th>Gramática</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="linha-tabela">
+                                    <th>S :: =</th>
+                                    <td>aAc</td>
+                                    <td>bCa</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr class="linha-tabela">
+                                    <th>A :: =</th>
+                                    <td>bCc</td>
+                                    <td>cBb</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr class="linha-tabela">
+                                    <th>B :: =</th>
+                                    <td>aBb</td>
+                                    <td>cCa</td>
+                                    <td>E</td>
+                                </tr>
+                                <tr class="linha-tabela">
+                                    <th>C :: =</th>
+                                    <td>aAa</td>
+                                    <td>bBb</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="">
+                            <table class="gram-table">
+                                <thead>
+                                    <tr class="cabecalho-tabela">
+                                        <th></th>
+                                        <th>First</th>
+                                        <th>Follow</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="linha-tabela">
+                                        <th>S</th>
+                                        <td>{ a, b }</td>
+                                        <td>{ $ }</td>
+                                    </tr>
+                                    <tr class="linha-tabela">
+                                        <th>A</th>
+                                        <td>{ b, c }</td>
+                                        <td>{ c, a }</td>
+                                    </tr>
+                                    <tr class="linha-tabela">
+                                        <th>B</th>
+                                        <td>{ a, c, E }</td>
+                                        <td>{ b }</td>
+                                    </tr>
+                                    <tr class="linha-tabela">
+                                        <th>C</th>
+                                        <td>{ a, b }</td>
+                                        <td>{ c, a}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div>
+                            <table class="">
+                                <thead>
+                                    <tr class="cabecalho-tabela">
+                                        <th>Tabela</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr class="linha-tabela">
+                                        <th>#</th>
+                                        <th>a</th>
+                                        <th>b</th>
+                                        <th>c</th>
+                                        <th>$</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="linha-tabela">
+                                        <th>S</th>
+                                        <td>S -> aAc</td>
+                                        <td>S -> bCa</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="linha-tabela">
+                                        <th>A</th>
+                                        <td>-</td>
+                                        <td>A -> bCc</td>
+                                        <td>A -> cBc</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr class="linha-tabela">
+                                        <th>B</th>
+                                        <td>B -> aBb</td>
+                                        <td>-</td>
+                                        <td>B -> cCa</td>
+                                        <td>E</td>
+                                    </tr>
+                                    <tr class="linha-tabela">
+                                        <th>C</th>
+                                        <td>C -> aAa</td>
+                                        <td>C -> bBb</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="">
+                        <div class="">
+                            <a>Sentença</a>
+                            <input />
+                        </div>
+                        <div class="">
+                            <button>Gerar Sentença</button>
+                            <button>Executar</button>
+                            <button>Limpar</button>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="">
+                            <table class="">
+                                <thead class="">
+                                    <tr>
+                                        <th>Pilha</th>
+                                        <th>Entrada</th>
+                                        <th>Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="">
+                            <div class="">
+                                <button>Próximo Passo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
