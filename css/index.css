@@ -1,28 +1,62 @@
-.cabecalho {
+.titulo {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    margin: 25px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: underline;
 }
 
-.cabecalho-tabela {
-    font-family: 'Roboto', sans-serif;
+.titulo-tabela {
+    font-size: 18px;
+    color: black;
+}
+
+.entrada-sentenca {
+    margin-top: 40px;
+    margin-bottom: 20px;
     font-size: 18px;
     text-align: center;
 }
 
-.linha-tabela {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+.entrada-sentenca button {
+    background-color: black;
+    color: white;
+    padding: 0 10px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
-.linha-tabela td {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    width: 80px;
-    
+.entrada-sentenca input {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 35px;
+    margin: 0 15px;
 }
 
-.linha-tabela th {
-    width: 80px;
-    text-align: center;
+.tabela-pilha {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.linha-pilha td {
+    border-bottom: 1px solid black;
+}
+
+.bt-prox {
+    background-color: green;
+    color: white;
+    padding: 0 10px;
+    height: 35px;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+.bt-reiniciar { 
+    background-color: red;
+    color: white;
+    padding: 0 10px;
+    height: 35px;
+    border: 1px solid red;
+    border-radius: 10px;
 }
